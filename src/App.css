@@ -40,13 +40,17 @@
 }
 
 .satisfy {
-  font-family: 'Satisfy', cursive;;
+  font-family: 'Satisfy', cursive;
 }
 :root {
   --brown: #BC6C25;
   --light-brown: #DDA15E;
   --beige: #FEFAE0;
   --dark-black: #201f1f;
+}
+
+.logo {
+  width: 100px;
 }
 
 .mensaje {

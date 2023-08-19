@@ -4,7 +4,7 @@ const NavBar = () => {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container">
                 <a className="navbar-brand" href="/">
-                    <img src='./logo.png' className='rounded-circle w-25'/>
+                    <img src='./logo.png' className='rounded-circle logo'/>
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -30,9 +30,12 @@ const NavBar = () => {
                         <li><a className="dropdown-item text-center" href="/">Ver productos</a></li>
                     </ul>
                     </li>
+                    <li className="nav-item me-2 d-flex align-items-center">
+                        <a className="nav-link" href="/">FAQ</a>
+                    </li> 
                     <li className="nav-item me-2">
                         <a className="nav-link" href="/"><i className="bi bi-person fs-4"></i></a>
-                    </li> 
+                    </li>
                     <CartWidget></CartWidget>
                 </ul>
                 </div>
