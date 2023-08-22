@@ -1,17 +1,19 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
 import './App.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import BannerPrincipal from './components/BannerPrincipal/BannerPrincipal';
+import Footer from './components/Footer/Footer';
+// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
 
 function App() {
   return (
     <>
-    <header>
-      <NavBar></NavBar>
+    <header className="position-relative">
+      <NavBar className='position-absolute' />
+      <BannerPrincipal className='position-absolute' />
     </header>
-      <ItemListContainer greeting="Es hora de comprar... ¡Bienvenidos a Relax!😊"></ItemListContainer>
+      {/* <ItemListContainer greeting="Es hora de comprar... ¡Bienvenidos a Relax!😊"></ItemListContainer> */}
+      <Footer/>
     </>
   );
 }
