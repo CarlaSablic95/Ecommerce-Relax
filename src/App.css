@@ -11,23 +11,52 @@
   --beige: #FEFAE0;
   --dark-black: #201f1f;
 }
+
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--dark-black) 30%, var(--light-brown) 100%);
+  border-radius: 8px;
+  border: 3px solid #ffffff;
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 .brittany {
   font-family: "Brittany";
 }
 
+.btn-primary {
+  background-color: var(--dark-black) !important;
+    color: var(--beige) !important;
+    border: none !important;
+}
+
+/* HOME */
+/* Banner principal */
 .portada {
   background-image: url("/src/assets/img/portada.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center -65px;
+  background-position: 50% top;
   height: 100vh;
   filter: brightness(0.7);
 }
 
+  /* Sección nosotros */
+.seccion-nosotros {
+  background-color: var(--dark-black);
+}
+
+.titulo-nosotros {
+  background-color: var(--beige);
+  top: -15px;
+  left: -30px;
+}
 
 .mensaje {
   display: block;
@@ -38,6 +67,30 @@ body {
   overflow: hidden;
   margin: 0 auto;
   padding: 2px;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.outfits-mujer {
+  background-image: url("/src/assets/img/outfits-mujer.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% top;
+  height: 90vh;
+}
+
+.outfits-hombre {
+  background-image: url("/src/assets/img/outfits-hombre.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% top;
+  height: 90vh;
 }
 
 @keyframes typing {

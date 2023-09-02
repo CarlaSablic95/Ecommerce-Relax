@@ -1,19 +1,27 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import BannerPrincipal from './components/BannerPrincipal/BannerPrincipal';
+import SobreNosotros from './components/SobreNosotros/SobreNosotros';
+import SeccionOutfits from './components/SeccionOutfits/SeccionOutfits';
+import Faq from './components/Faq/Faq';
 import Footer from './components/Footer/Footer';
-// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
 function App() {
   return (
     <>
-    <header className="position-relative">
-      <NavBar className='position-absolute' />
-      <BannerPrincipal className='position-absolute' />
+    <header>
+      <NavBar/>
+      {/* <ItemListContainer greeting="Es hora de comprar... ¡Bienvenidos a Relax!😊">
+      </ItemListContainer> */}
+      <BannerPrincipal/>
     </header>
-      {/* <ItemListContainer greeting="Es hora de comprar... ¡Bienvenidos a Relax!😊"></ItemListContainer> */}
-      <Footer/>
+    <SobreNosotros />
+    <SeccionOutfits />
+    <Faq />
+    
+      <Footer />
     </>
   );
 }
