@@ -1,3 +1,13 @@
+import { Link, NavLink } from 'react-router-dom';
+
+const routes = [
+    {
+        path: '/',
+        name:""
+},
+{},
+{}]
+
 import CartWidget from '../CartWidget/CartWidget';
 const NavBar = () => {
     return (
@@ -11,13 +21,15 @@ const NavBar = () => {
                     </button>
                     <div className="collapse navbar-collapse justify-content-between align-items-center" id="navbarNavDropdown">
                     <ul className="navbar-nav align-items-center ms-lg-5">
+                    <li className="nav-item me-2 text-center">
+                                <a className="nav-link" href="/">Productos</a>
+                            </li>
                         <li className="nav-item dropdown text-center">
                         <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Mujer
                         </a>
                         <ul className="dropdown-menu">
                             <li><a className="dropdown-item text-center" href="/">Ver outfits</a></li>
-                            <li><a className="dropdown-item text-center" href="/">Ver productos</a></li>
                         </ul>
                         </li>
                         
@@ -27,7 +39,6 @@ const NavBar = () => {
                         </a>
                         <ul className="dropdown-menu">
                             <li><a className="dropdown-item text-center" href="/">Ver outfits</a></li>
-                            <li><a className="dropdown-item text-center" href="/">Ver productos</a></li>
                         </ul>
                         </li>
                         
@@ -43,6 +54,12 @@ const NavBar = () => {
                     </ul>
                     </div>
                 </div>
+{/* LINK = <a> en html*/}
+{/* to = href en html*/}
+                {routes.map((route) => {
+                    
+                    <NavLink className to={route.path}>{route.name}</NavLink>
+                })}
             </nav>
     )
 }

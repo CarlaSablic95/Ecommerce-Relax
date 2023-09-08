@@ -39,7 +39,7 @@ body {
 /* HOME */
 /* Banner principal */
 .portada {
-  background-image: url("/src/assets/img/portada.jpg");
+  background-image: url("../public/img/portada.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% top;
@@ -78,7 +78,7 @@ body {
 }
 
 .outfits-mujer {
-  background-image: url("/src/assets/img/outfits-mujer.jpeg");
+  background-image: url("../public/img/outfits-mujer.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% top;
@@ -86,11 +86,35 @@ body {
 }
 
 .outfits-hombre {
-  background-image: url("/src/assets/img/outfits-hombre.png");
+  background-image: url("../public/img/outfits-hombre.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% top;
   height: 90vh;
+}
+
+.estilo-rock {
+  background-image: url("../public/img/outfits-mujer/estilo-rock.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  height: 100vh;
+}
+
+.estilo-boho {
+  background-image: url("../public/img/outfits-mujer/estilo-boho.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 70%;
+  height: 100vh;
+}
+
+.estilo-casual {
+  background-image: url("../public/img/outfits-mujer/estilo-casual.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% top;
+  height: 100vh;
 }
 
 @keyframes typing {

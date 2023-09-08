@@ -1,27 +1,30 @@
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home/Home';
 import NavBar from './components/NavBar/NavBar';
-import BannerPrincipal from './components/BannerPrincipal/BannerPrincipal';
-import SobreNosotros from './components/SobreNosotros/SobreNosotros';
-import SeccionOutfits from './components/SeccionOutfits/SeccionOutfits';
-import Faq from './components/Faq/Faq';
 import Footer from './components/Footer/Footer';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
+// import Products from './pages/Products/Products';
+// import Detail from './pages/Detail/Detail';
 
 
+// Pagina todo // lógica
+// Componentes => nuestra ayuda UI o elementos que se repiten
 function App() {
   return (
     <>
-    <header>
-      <NavBar/>
-      {/* <ItemListContainer greeting="Es hora de comprar... ¡Bienvenidos a Relax!😊">
-      </ItemListContainer> */}
-      <BannerPrincipal/>
-    </header>
-    <SobreNosotros />
-    <SeccionOutfits />
-    <Faq />
-    
-      <Footer />
+      <BrowserRouter>
+        <NavBar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            {/* <Route path='/login' element={<Login/>} />
+            <Route path='/products' element={<Products/>} />
+            <Route path='/products/:id' element={<Products/>} /> */}
+          </Routes>
+      </BrowserRouter>
+
+    <Footer />
     </>
   );
 }
