@@ -93,16 +93,41 @@ body {
   height: 90vh;
 }
 
-.estilo-rock {
-  background-image: url("../public/img/outfits-mujer/estilo-rock.jpg");
+.estilo-rock-mujer {
+  background-image: url("./pages/CarouselOutfitsMujer/img/estilo-rock.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 30%;
   height: 100vh;
 }
 
+.estilo-rock-hombre {
+  background-image: url("./pages/CarouselOutfitsHombre/img/estilo-rock.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  height: 100vh;
+}
+
+.estilo-urbano {
+  background-image: url("./pages/CarouselOutfitsHombre/img/estilo-urbano.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% top;
+  height: 100vh;
+}
+
+.estilo-chic {
+  background-image: url("./pages/CarouselOutfitsHombre/img/estilo-chic.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  height: 100vh;
+}
+
+
 .estilo-boho {
-  background-image: url("../public/img/outfits-mujer/estilo-boho.jpeg");
+  background-image: url("./pages/CarouselOutfitsMujer/img/estilo-boho.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 70%;
@@ -110,7 +135,7 @@ body {
 }
 
 .estilo-casual {
-  background-image: url("../public/img/outfits-mujer/estilo-casual.jpeg");
+  background-image: url("./pages/CarouselOutfitsMujer/img/estilo-casual.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% top;

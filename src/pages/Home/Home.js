@@ -1,5 +1,6 @@
-import OutfitsMujer from '../OutfitsMujer/OutfitsMujer';
-import OutfitsHombre from '../OutfitsHombre/OutfitsHombre';
+import CarouselOutfitsMujer from '../CarouselOutfitsMujer/CarouselOutfitsMujer';
+import CarouselOutfitsHombre from '../CarouselOutfitsHombre/CarouselOutfitsHombre';
+import Item from '../../components/Item/Item';
 
 const Home = () => {
     return (
@@ -33,10 +34,9 @@ const Home = () => {
                 </div>
             </section>
 
-            <section>
-                <OutfitsMujer />
-                <OutfitsHombre />
-            </section>
+            
+                <CarouselOutfitsMujer />
+                <CarouselOutfitsHombre />
         </main>
     )
 

@@ -2,15 +2,12 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+// import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemCount from './components/ItemCount/ItemCount';
 import Footer from './components/Footer/Footer';
-// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-
-// import Products from './pages/Products/Products';
-// import Detail from './pages/Detail/Detail';
 
 
-// Pagina todo // lógica
-// Componentes => nuestra ayuda UI o elementos que se repiten
 function App() {
   return (
     <>
@@ -23,7 +20,9 @@ function App() {
             <Route path='/products/:id' element={<Products/>} /> */}
           </Routes>
       </BrowserRouter>
-
+      <ItemListContainer greeting = {'Bienvenidos'} />
+      {/* <ItemDetailContainer /> */}
+      <ItemCount valorInicial={1} stockMax={10} onAdd={(cantidad) => console.log('Producto agregado ', cantidad)} />
     <Footer />
     </>
   );
