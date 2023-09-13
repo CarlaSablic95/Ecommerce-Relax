@@ -1,66 +1,58 @@
-import { Link, NavLink } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
+import { NavLink } from 'react-router-dom';
 
 const routes = [
     {
         path: '/',
-        name:""
-},
-{},
-{}]
+        link: 'Home'
+    },
 
-import CartWidget from '../CartWidget/CartWidget';
+    {
+        path: '/products',
+        link: 'Productos'
+    },
+    {
+        path: '/category/mujer',
+        link: 'Mujer'
+    },
+    {
+        path: '/category/hombre',
+        link: 'Hombre'
+    },
+    {
+        path: '/faq',
+        link: 'FAQ'
+    },
+    {
+        path: '/login',
+        link: 'Ingresar'
+    },
+]
+
 const NavBar = () => {
     return (
-            <nav className="navbar navbar-expand-lg bg-transparent">
-                <div className="container">
-                    <a className="navbar-brand ms-4" href="/">
+        <nav className="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+            <div className="container">
+                <NavLink className="navbar-brand ms-4" to="/">
                     <h1 className="brittany pt-4">Relax</h1>
-                    </a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                </NavLink>
+
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse justify-content-between align-items-center" id="navbarNavDropdown">
-                    <ul className="navbar-nav align-items-center ms-lg-5">
-                    <li className="nav-item me-2 text-center">
-                                <a className="nav-link" href="/">Productos</a>
-                            </li>
-                        <li className="nav-item dropdown text-center">
-                        <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Mujer
-                        </a>
-                        <ul className="dropdown-menu">
-                            <li><a className="dropdown-item text-center" href="/">Ver outfits</a></li>
-                        </ul>
-                        </li>
-                        
-                        <li className="nav-item dropdown text-center">
-                        <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Hombre
-                        </a>
-                        <ul className="dropdown-menu">
-                            <li><a className="dropdown-item text-center" href="/">Ver outfits</a></li>
-                        </ul>
-                        </li>
-                        
-                            <li className="nav-item me-2 text-center">
-                                <a className="nav-link" href="/">FAQ</a>
-                            </li>
-                            </ul>
-                        <ul className="navbar-nav align-items-center">
-                            <li className="nav-item me-2 text-center">
-                                <a className="nav-link" href="/"><i className="bi bi-person fs-4"></i></a>
-                            </li>
-                            <CartWidget></CartWidget>
+                </button>
+                <div className="collapse navbar-collapse justify-content-between align-items-center" id="navbarNavDropdown">
+                    <ul className="navbar-nav align-items-center">
+                        { routes.map((route) => (
+                            <NavLink key={route.path} to={route.path} className="mb-3 mb-md-0 mx-4 text-dark text-decoration-none nav-item me-2 text-center">
+                            {route.link}</NavLink>
+                        ))}
                     </ul>
-                    </div>
+                        <ul className="navbar-nav align-items-center">
+                            <CartWidget></CartWidget>
+                        </ul>
                 </div>
-{/* LINK = <a> en html*/}
-{/* to = href en html*/}
-                {routes.map((route) => {
-                    
-                    <NavLink className to={route.path}>{route.name}</NavLink>
-                })}
-            </nav>
+            </div>
+        </nav>
     )
 }
 

@@ -7,7 +7,7 @@ const Footer = () => {
                         <h2 className="brittany text-white text-center">Relax</h2>
                     </div>
                     <div className="col-12 col-md-4">
-                        <h3 className="mb-4 fst-italic">Contactanos</h3>
+                        <h4 className="mb-4 fst-italic">Contactanos</h4>
                         <p className="mb-2"><i className="bi bi-phone"></i> 3412485979</p>
                         <p><i className="bi bi-geo-alt"></i> Rosario, Santa Fe</p>
                     </div>

@@ -1,15 +1,9 @@
-import CarouselOutfitsMujer from '../CarouselOutfitsMujer/CarouselOutfitsMujer';
-import CarouselOutfitsHombre from '../CarouselOutfitsHombre/CarouselOutfitsHombre';
-import Item from '../../components/Item/Item';
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
         <main>
-            <section className="portada position-relative">
-                <div className="position-absolute z-2">
-                    <h2 className="text-white">Conocenos</h2>
-                </div>
-            </section>
+            <section className="portada position-relative"></section>
             <section className="seccion-nosotros text-white d-flex justify-content-center p-5">
                 <div className="col-11 col-md-9 col-lg-6 p-5 border position-relative">
                     <h3 className="brittany titulo-nosotros position-absolute text-dark p-2">Sobre <span className="fst-italic">nosotros</span></h3>
@@ -25,18 +19,14 @@ const Home = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-md-6 outfits-mujer d-flex justify-content-center align-items-center">
-                            <button className="btn btn-lg btn-dark">Ver Outfits</button>
+                            <Link to="/outfits-mujer" className="btn btn-lg btn-dark">Ver Outfits</Link>
                         </div>
                         <div className="col-12 col-md-6 outfits-hombre d-flex justify-content-center align-items-center">
-                            <button className="btn btn-lg btn-light">Ver Outfits</button>
+                            <Link to="/outfits-hombre" className="btn btn-lg btn-light">Ver Outfits</Link>
                         </div>
                     </div>
                 </div>
             </section>
-
-            
-                <CarouselOutfitsMujer />
-                <CarouselOutfitsHombre />
         </main>
     )
 

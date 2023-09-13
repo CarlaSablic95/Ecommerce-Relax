@@ -58,17 +58,6 @@ body {
   left: -30px;
 }
 
-.mensaje {
-  display: block;
-  white-space: nowrap;
-  border-right: 2px solid;
-  width: 40ch;
-  animation: typing 2s steps(12), blink .5s infinite step-end alternate;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 2px;
-}
-
 .navbar-toggler {
   border: none !important;
 }
@@ -94,7 +83,7 @@ body {
 }
 
 .estilo-rock-mujer {
-  background-image: url("./pages/CarouselOutfitsMujer/img/estilo-rock.jpg");
+  background-image: url("./pages/OutfitsMujer/img/estilo-rock.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 30%;
@@ -102,7 +91,7 @@ body {
 }
 
 .estilo-rock-hombre {
-  background-image: url("./pages/CarouselOutfitsHombre/img/estilo-rock.jpg");
+  background-image: url("./pages/OutfitsHombre/img/estilo-rock.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 30%;
@@ -110,7 +99,7 @@ body {
 }
 
 .estilo-urbano {
-  background-image: url("./pages/CarouselOutfitsHombre/img/estilo-urbano.jpg");
+  background-image: url("./pages/OutfitsHombre/img/estilo-urbano.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% top;
@@ -118,7 +107,7 @@ body {
 }
 
 .estilo-chic {
-  background-image: url("./pages/CarouselOutfitsHombre/img/estilo-chic.jpeg");
+  background-image: url("./pages/OutfitsHombre/img/estilo-chic.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 40%;
@@ -127,7 +116,7 @@ body {
 
 
 .estilo-boho {
-  background-image: url("./pages/CarouselOutfitsMujer/img/estilo-boho.jpeg");
+  background-image: url("./pages/OutfitsMujer/img/estilo-boho.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 70%;
@@ -135,7 +124,7 @@ body {
 }
 
 .estilo-casual {
-  background-image: url("./pages/CarouselOutfitsMujer/img/estilo-casual.jpeg");
+  background-image: url("./pages/OutfitsMujer/img/estilo-casual.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% top;

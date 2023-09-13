@@ -1,10 +1,14 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Home from './pages/Home/Home';
 import NavBar from './components/NavBar/NavBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home/Home';
+import OutfitsMujer from './pages/OutfitsMujer/OutfitsMujer';
+import OutfitsHombre from './pages/OutfitsHombre/OutfitsHombre';
+import Faq from './pages/Faq/Faq';
+import Login from './pages/Login/Login';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-// import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import ItemCount from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Footer from './components/Footer/Footer';
 
 
@@ -13,16 +17,19 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            {/* <Route path='/login' element={<Login/>} />
-            <Route path='/products' element={<Products/>} />
-            <Route path='/products/:id' element={<Products/>} /> */}
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<ItemListContainer />} />
+          <Route path="/category/:categoryID" element={<ItemListContainer />} />
+          <Route path="/product/:id" element={<ItemDetailContainer />} />
+          <Route path="/outfits-mujer" element={<OutfitsMujer/>} />
+          <Route path="/outfits-hombre" element={<OutfitsHombre/>} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<h1 className='text-center'>404 Not found</h1>} />
+        </Routes>
       </BrowserRouter>
-      <ItemListContainer greeting = {'Bienvenidos'} />
-      {/* <ItemDetailContainer /> */}
-      <ItemCount valorInicial={1} stockMax={10} onAdd={(cantidad) => console.log('Producto agregado ', cantidad)} />
+    
     <Footer />
     </>
   );
