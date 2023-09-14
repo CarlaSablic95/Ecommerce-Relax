@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9a030cbd.css",
+    "main.js": "/static/js/main.5dea1092.js",
+    "static/js/787.56a3d784.chunk.js": "/static/js/787.56a3d784.chunk.js",
+    "static/media/estilo-rock.jpg": "/static/media/estilo-rock.2c8d6d98961ef66388db.jpg",
+    "static/media/estilo-chic.jpeg": "/static/media/estilo-chic.47a3508c085737b63007.jpeg",
+    "static/media/portada.jpg": "/static/media/portada.9354ee6963b8eb318c39.jpg",
+    "static/media/outfit-rock-1.png": "/static/media/outfit-rock-1.e91e7fe0bedc8886f275.png",
+    "static/media/outfits-hombre.png": "/static/media/outfits-hombre.58f05d59f0515fce6dbc.png",
+    "static/media/outfit-rock-2.png": "/static/media/outfit-rock-2.0c690bba00cf202dfaf4.png",
+    "static/media/estilo-boho.jpeg": "/static/media/estilo-boho.9e645080ae065d9bc443.jpeg",
+    "static/media/estilo-casual.jpeg": "/static/media/estilo-casual.f01051d5483a05f20444.jpeg",
+    "static/media/estilo-urbano.jpg": "/static/media/estilo-urbano.04b182a5c122910fc9f0.jpg",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
+    "static/media/outfits-mujer.jpeg": "/static/media/outfits-mujer.02349e9639fa585ee57d.jpeg",
+    "static/media/outfit-boho-2.jpg": "/static/media/outfit-boho-2.d9a016a485c7ae2861de.jpg",
+    "static/media/outfit-casual-chic-1.png": "/static/media/outfit-casual-chic-1.4c5f9d60157aedf4805c.png",
+    "static/media/outfit-boho-1.jpg": "/static/media/outfit-boho-1.07e27fc2cd56abeb4abe.jpg",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
+    "static/media/outfit-casual-chic-2.png": "/static/media/outfit-casual-chic-2.f329a5eb6f192037f02f.png",
+    "static/media/outfit-casual-1.jpg": "/static/media/outfit-casual-1.ccd008a473a9cfc45477.jpg",
+    "static/media/outfit-casual-2.jpg": "/static/media/outfit-casual-2.5582e14862af1d588a36.jpg",
+    "static/media/outfit-urbano-2.jpg": "/static/media/outfit-urbano-2.58182691271695902776.jpg",
+    "static/media/outfit-urbano-1.jpg": "/static/media/outfit-urbano-1.e379e2627c6202f06a35.jpg",
+    "static/media/Brittany.ttf": "/static/media/Brittany.0d8ad040c68381fe6600.ttf",
+    "index.html": "/index.html",
+    "main.9a030cbd.css.map": "/static/css/main.9a030cbd.css.map",
+    "main.5dea1092.js.map": "/static/js/main.5dea1092.js.map",
+    "787.56a3d784.chunk.js.map": "/static/js/787.56a3d784.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a030cbd.css",
+    "static/js/main.5dea1092.js"
+  ]
+}
