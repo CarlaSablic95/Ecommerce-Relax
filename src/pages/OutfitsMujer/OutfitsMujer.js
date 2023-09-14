@@ -16,7 +16,7 @@ const OutfitsMujer = () => {
               <div className="col-6 estilo-rock-mujer"></div>
               <div className="col-6 p-5">
                 <h3 className="mb-5 text-center">Outfits propuestos</h3>
-                <h2 className="brittany fs-1 py-4 text-center">Rocker</h2>
+                <h2 className="brittany fs-1 py-4 text-center">Estilo Rocker</h2>
                 <div className="container">
                   <div className="d-flex gap-4">
                       <div className="card">
@@ -46,7 +46,7 @@ const OutfitsMujer = () => {
               <div className="col-6 estilo-boho"></div>
               <div className="col-6 p-5">
                 <h3 className="mb-5 text-center">Outfits propuestos</h3>
-                <h2 className="brittany fs-1 py-4 text-center">Boho</h2>
+                <h2 className="brittany fs-1 py-4 text-center">Estilo Boho</h2>
                 <div className="container">
                   <div className="d-flex gap-4">
                       <div className="card">
@@ -76,7 +76,7 @@ const OutfitsMujer = () => {
               <div className="col-6 estilo-casual"></div>
               <div className="col-6 p-5">
                 <h3 className="mb-5 text-center">Outfits propuestos</h3>
-                <h2 className="brittany fs-1 py-4 text-center">Casual chic</h2>
+                <h2 className="brittany fs-1 py-4 text-center">Estilo Casual chic</h2>
                 <div className="container">
                   <div className="d-flex gap-4">
                       <div className="card">

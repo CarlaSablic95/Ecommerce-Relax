@@ -15,8 +15,8 @@ const CarouselOutfitsHombre = () => {
                 <div className="row">
                   <div className="col-6 estilo-rock-hombre"></div>
                   <div className="col-6 p-5">
-                    <h3 className="mb-5 text-center">Outfits propuestos</h3>
-                    <h2 className="brittany fs-1 py-4 text-center">Rocker</h2>
+                    <h3 className="mb-5 text-center">Outfits propuestos:</h3>
+                    <h2 className="brittany fs-1 pt-2 pb-4 text-center">Estilo Rocker</h2>
                     <div className="container">
                       <div className="d-flex gap-4">
                           <div className="card">
@@ -46,7 +46,7 @@ const CarouselOutfitsHombre = () => {
                   <div className="col-6 estilo-urbano"></div>
                   <div className="col-6 p-5">
                     <h3 className="mb-5 text-center">Outfits propuestos</h3>
-                    <h2 className="brittany fs-1 py-4 text-center">Urban</h2>
+                    <h2 className="brittany fs-1 py-4 text-center">Estilo Urban</h2>
                     <div className="container">
                       <div className="d-flex gap-4">
                           <div className="card">
@@ -76,7 +76,7 @@ const CarouselOutfitsHombre = () => {
                   <div className="col-6 estilo-chic"></div>
                   <div className="col-6 p-5">
                     <h3 className="mb-5 text-center">Outfits propuestos</h3>
-                    <h2 className="brittany fs-1 py-4 text-center">Urban Chic</h2>
+                    <h2 className="brittany fs-1 py-4 text-center">Estilo Urban Chic</h2>
                     <div className="container">
                       <div className="d-flex gap-4">
                           <div className="card">
