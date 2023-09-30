@@ -46,10 +46,10 @@ const products = [
     
     {
         id: 6,
-        title: 'Botas',
+        title: 'Borcegos',
         description: 'Lorem ipsum',
         price: 2000,
-        pictureUrl:'botas-hombre.png',
+        pictureUrl:'borcegos.png',
         category: 'hombre'
     },
     
@@ -188,23 +188,23 @@ const products = [
         category: 'hombre'
     },
     
-    {
-        id: 22,
-        title: 'Lentes de sol',
-        description: 'Lorem ipsum',
-        price: 2000,
-        pictureUrl:'lentes-de-sol.png',
-        category: 'hombre'
-    },
-    
-    {
-        id: 23,
-        title: 'Lentes negros',
-        description: 'Lorem ipsum',
-        price: 2000,
-        pictureUrl:'lentes-negros.png',
-        category: 'hombre'
-    },
+        {
+            id: 22,
+            title: 'Lentes de sol',
+            description: 'Lorem ipsum',
+            price: 2000,
+            pictureUrl:'lentes-de-sol.png',
+            category: 'hombre'
+        },
+        
+        {
+            id: 23,
+            title: 'Lentes negros',
+            description: 'Lorem ipsum',
+            price: 2000,
+            pictureUrl:'lentes-negros.png',
+            category: 'hombre'
+        },
     
     {
         id: 24,
@@ -292,7 +292,7 @@ export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
-        }, 2000)
+        }, 500)
     })
 }
 
@@ -300,7 +300,7 @@ export const getProductId = (id) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find((product) => product.id === id))
-        }, 2000)
+        }, 500)
     })
 }
 
@@ -308,6 +308,6 @@ export const getProductsCategory = (productCategory) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.filter((product) => product.category === productCategory))
-        }, 2000)
+        }, 500)
     })
 }

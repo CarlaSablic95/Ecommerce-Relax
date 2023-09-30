@@ -139,6 +139,18 @@ body {
   padding: 10px;
 }
 
+.detalle-producto {
+  min-height: 50vh;
+}
+
+.bg-beige {
+  background-color: var(--beige);
+}
+
+.seccion {
+  min-height: 60vh;
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -161,6 +173,10 @@ footer {
 
 .redes {
   color: var(--beige);
+}
+
+.active {
+  border-bottom: 3px solid var(--dark-black);
 }
 
 @media (max-width: 576px) {

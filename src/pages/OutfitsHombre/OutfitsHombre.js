@@ -13,8 +13,8 @@ const CarouselOutfitsHombre = () => {
             <div className="carousel-item active">
               <div className="container-fluid">
                 <div className="row">
-                  <div className="col-6 estilo-rock-hombre"></div>
-                  <div className="col-6 p-5">
+                  <div className="col-6 d-none d-md-block estilo-rock-hombre"></div>
+                  <div className="col-12 col-md-6 p-5">
                     <h3 className="mb-5 text-center">Outfits propuestos:</h3>
                     <h2 className="brittany fs-1 pt-2 pb-4 text-center">Estilo Rocker</h2>
                     <div className="container">
@@ -43,8 +43,8 @@ const CarouselOutfitsHombre = () => {
             <div className="carousel-item">
               <div className="container-fluid">
                 <div className="row">
-                  <div className="col-6 estilo-urbano"></div>
-                  <div className="col-6 p-5">
+                  <div className="col-6 d-none d-md-block estilo-urbano"></div>
+                  <div className="col-12 col-md-6 p-5">
                     <h3 className="mb-5 text-center">Outfits propuestos</h3>
                     <h2 className="brittany fs-1 py-4 text-center">Estilo Urban</h2>
                     <div className="container">
@@ -73,8 +73,8 @@ const CarouselOutfitsHombre = () => {
             <div className="carousel-item">
               <div className="container-fluid">
                 <div className="row">
-                  <div className="col-6 estilo-chic"></div>
-                  <div className="col-6 p-5">
+                  <div className="col-6 d-none d-md-block estilo-chic"></div>
+                  <div className="col-12 col-md-6 p-5">
                     <h3 className="mb-5 text-center">Outfits propuestos</h3>
                     <h2 className="brittany fs-1 py-4 text-center">Estilo Urban Chic</h2>
                     <div className="container">

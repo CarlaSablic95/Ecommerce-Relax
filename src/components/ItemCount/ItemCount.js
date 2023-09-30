@@ -1,29 +1,35 @@
 import { useState } from 'react';
-const ItemCount = ({valorInicial, stockMax, onAdd}) => {
 
-    const [cantidad, setCantidad] = useState(valorInicial);
+const ItemCount = ({ initial, stock, onAdd }) => {
+    const [quantity, setQuantity] = useState(initial);
 
-    const agregarItem = () => {
-        if(cantidad < stockMax) {
-            setCantidad(cantidad + 1);
-        }
+    const addItem = () => {
+        if (quantity >= stock)
+          return setQuantity(prev => prev + 1);
     }
 
-    const quitarItem = () => {
-        if(cantidad > 1) {
-            setCantidad(cantidad - 1);
-        }
+    const deleteItem = () => {
+        if (quantity <= 1) 
+        return  setQuantity(prev => prev - 1);
+        
+    }
+
+    const handleOnAdd = (quantity) => {
+        onAdd(quantity)
     }
 
 
     return (
-        <div className="d-flex gap-4 p-4 align-items-center">
-            <button className="btn btn-primary" onClick={quitarItem}>-</button>
-                <p className="fw-bold mb-0">{cantidad}</p>
-                <button className="btn btn-primary" onClick={agregarItem}>+</button>
-            <div>
-                <button className="btn btn-primary" onClick={() => onAdd(cantidad)} disabled={!stockMax}>Agregar al carrito</button>
+        <div className="d-flex gap-4 p-0 mt-2 mt-md-4 justify-content-center justify-content-md-start align-items-center">
+            <div className="d-flex align-items-center">
+                <button className="btn btn-primary" onClick={ deleteItem }>-</button>
+                <p className="fw-bold mb-0 mx-4">{ quantity }</p>
+                <button className="btn btn-primary" onClick={ addItem }>+</button>
             </div>
+            <div>
+                <button className="btn btn-primary" onClick={ handleOnAdd }>Agregar al carrito</button>
+            </div>
+
         </div>
     )
 }

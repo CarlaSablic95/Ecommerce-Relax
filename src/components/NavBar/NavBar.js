@@ -1,5 +1,5 @@
 import CartWidget from '../CartWidget/CartWidget';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const routes = [
     {
@@ -26,16 +26,16 @@ const routes = [
     {
         path: '/login',
         link: 'Ingresar'
-    },
+    }
 ]
 
 const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
             <div className="container">
-                <NavLink className="navbar-brand ms-4" to="/">
+                <Link className="navbar-brand ms-4" to="/">
                     <h1 className="brittany pt-4">Relax</h1>
-                </NavLink>
+                </Link>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse justify-content-between align-items-center" id="navbarNavDropdown">
                     <ul className="navbar-nav align-items-center">
                         { routes.map((route) => (
-                            <NavLink key={route.path} to={route.path} className="mb-3 mb-md-0 mx-4 text-dark text-decoration-none nav-item me-2 text-center">
+                            <NavLink key={route.path} to={route.path} className={({isActive}) => `${isActive ? 'active' : ''} mb-3 mb-md-0 mx-4 text-decoration-none nav-item me-2 text-dark text-center`}>
                             {route.link}</NavLink>
                         ))}
                     </ul>

@@ -9,12 +9,17 @@ import Faq from './pages/Faq/Faq';
 import Login from './pages/Login/Login';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Cart from './components/Cart/Cart';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Footer from './components/Footer/Footer';
+import CartProvider from './context/CartProvider';
 
 
 function App() {
+
   return (
     <>
+    <CartProvider>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -26,10 +31,11 @@ function App() {
           <Route path="/outfits-hombre" element={<OutfitsHombre/>} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/login" element={<Login />} />
-          <Route path="*" element={<h1 className='text-center'>404 Not found</h1>} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
-    
+    </CartProvider>
     <Footer />
     </>
   );

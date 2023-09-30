@@ -1,6 +1,6 @@
 const Faq = () => {
     return (
-        <section className="py-5 vh-50">
+        <section className="py-5 seccion">
             <div className="container">
                 <h2 className="text-center mb-5">Preguntas frecuentes <i className="bi bi-patch-question-fill"></i></h2>
                 {/* FAQ 1 */}
