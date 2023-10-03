@@ -19,12 +19,14 @@ const Cart = () => {
             </div>
         </section> ) : (
                 <section>
+                    <Link to="/products" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Seguir comprando
+                </Link>
                 <h1 className="text-center">Checkout</h1>
                         <table className="table">
                             <thead>
                                 <tr>
                                     <th className="text-start">Producto</th>
-                                    <th></th>
+                                    <th scope="col" className="text-center">Descripción</th>
                                     <th scope="col" className="text-end">Precio</th>
                                     <th scope="col" className="text-end">Cantidad</th>
                                     <th scope="col" className="text-end">Subtotal</th>
@@ -37,12 +39,12 @@ const Cart = () => {
                             </thead>
                             <tbody>
                                 {
-                                    cartList.map(({ id, title, image, stock, price }) => (
+                                    cartList.map(({ id, title, image, description, stock, price }) => (
                                         <tr key={id}>
                                             <th scope="row">
                                                 <img src={`/img/productos/${image}`} alt={title} width="100px" />
                                             </th>
-                                            <td className="text-start align-middle">{title}</td>
+                                            <td className="text-start align-middle">{description}</td>
                                             <td className="fw-bold text-end align-middle">${price}</td>
                                             <td className="fw-bold text-end align-middle">{stock} x ${price}</td>
                                             <td className="fw-bold text-end align-middle">${(stock * price).toFixed(2)}</td>
@@ -55,7 +57,7 @@ const Cart = () => {
                                     ))
                                 }
                                 <tr>
-                                    <th className="border-0">Total:</th>
+                                    <th className="border-0">Saldo total:</th>
                                     <th className="border-0"></th>
                                     <th className="border-0"></th>
                                     <th className="border-0"></th>
@@ -63,6 +65,9 @@ const Cart = () => {
                                 </tr>
                             </tbody>
                         </table>
+
+                        <Link to="/checkout" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Comprar
+                </Link>
                         </section>
                 )
 

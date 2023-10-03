@@ -11,6 +11,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import CheckoutForm from './components/CheckoutForm/CheckoutForm';
 import Footer from './components/Footer/Footer';
 import CartProvider from './context/CartProvider';
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<CheckoutForm />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

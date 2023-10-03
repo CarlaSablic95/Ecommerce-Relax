@@ -11,12 +11,18 @@ const CartProvider = ({ children }) => {
     }, [cartList]);
 
     const addItem = (item, quantity) => {
-        const isInCart = cartList.some((cartItem) => cartItem.id === item.id)
-        
-        if(!isInCart) {
-            setCartList(prev => [...prev, { ...item, quantity }])
+        const existingItem = cartList.find((cartItem) => cartItem.id === item.id);
+
+        if (existingItem) {
+            const updatedCart = cartList.map((cartItem) => {
+                if (cartItem.id === item.id) {
+                    return { ...cartItem, quantity: cartItem.quantity + quantity };
+                }
+                return cartItem;
+            });
+            setCartList(updatedCart);
         } else {
-            console.error('El producto ya fue agregado')
+            setCartList(prev => [...prev, { ...item, quantity }]);
         }
     }
 
@@ -32,8 +38,12 @@ const CartProvider = ({ children }) => {
        return cartList.reduce((acc, item) => acc += item?.stock * item?.price, 0).toFixed(2)
     }
 
+    const getTotalQuantity = () => {
+        return cartList.reduce((acc, item) => acc + item.stock, 0);
+    }
+
     return (
-        <CartContext.Provider value={{ cartList, addItem , removeItem, clear, total: getTotal() }}>
+        <CartContext.Provider value={{ cartList, addItem , removeItem, clear, total: getTotal(), totalQuantity: getTotalQuantity() }}>
             { children }
         </CartContext.Provider>
     )

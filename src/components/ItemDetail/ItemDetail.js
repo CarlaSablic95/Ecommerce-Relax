@@ -24,7 +24,6 @@ const ItemDetail = ({id, image, title, description, price, stock, style}) => {
             <h3 className='fw-bold'>{title}</h3>
             <p>{description}</p>
             <p className='fw-bold'>${price}</p>
-            <p className='fst-italic text-secondary'>Stock: {stock}</p>
             <div>
                 { quantity > 0 ?
                 (<Link to='/cart' className='btn btn-primary'>Terminar compra</Link>)
