@@ -10,8 +10,8 @@ const ItemDetail = ({id, image, title, description, price, stock, style}) => {
 
     const handleAddToCart = (number) => {
         setQuantity(number)
-        addItem({ id: id, title, price, stock: number});
-    }
+        addItem({ id: id, title, price, stock}, number)
+        }
 
     return(
        <section className='container detalle-producto'>

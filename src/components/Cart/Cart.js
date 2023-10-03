@@ -39,14 +39,14 @@ const Cart = () => {
                             </thead>
                             <tbody>
                                 {
-                                    cartList.map(({ id, title, image, description, stock, price }) => (
+                                    cartList.map(({ id, title, image, description, stock, price, quantity }) => (
                                         <tr key={id}>
                                             <th scope="row">
                                                 <img src={`/img/productos/${image}`} alt={title} width="100px" />
                                             </th>
                                             <td className="text-start align-middle">{description}</td>
                                             <td className="fw-bold text-end align-middle">${price}</td>
-                                            <td className="fw-bold text-end align-middle">{stock} x ${price}</td>
+                                            <td className="fw-bold text-end align-middle">{quantity} x ${price}</td>
                                             <td className="fw-bold text-end align-middle">${(stock * price).toFixed(2)}</td>
                                             <td className="fw-bold text-center align-middle">
                                                 <button className='btn-primary rounded-circle' onClick={() => removeItem(id)}>
