@@ -22,19 +22,20 @@ const CarouselOutfitsHombre = () => {
                           <div className="card">
                             <img src={outfitRock1} className="card-img-top" alt="outfit rock" />
                             <div className="card-body text-center">
-                              <h5 className="card-title text-center mb-4">Outfit #1</h5>
-                              <Link to="/products" className="btn btn-primary">Ver productos</Link>
+                              <h5 className="card-title text-center">Outfit #1</h5>
                             </div>
                           </div>
                         <div className="card">
                             <img src={outfitRock2} className="card-img-top" alt="outfit rock" />
                             <div className="card-body text-center">
-                              <h5 className="card-title text-center mb-4">Outfit #2</h5>
-                              <Link to="/products" className="btn btn-primary">Ver productos</Link>
+                              <h5 className="card-title text-center">Outfit #2</h5>
                             </div>
                         </div>
                       </div>
                     </div>
+                      <div className='d-flex justify-content-center mt-5'>
+                        <Link to="/products" className="btn btn-primary">Ver productos</Link>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -52,17 +53,18 @@ const CarouselOutfitsHombre = () => {
                           <div className="card">
                             <img src={outfitUrbano1} className="card-img-top" alt="outfit urbano" />
                             <div className="card-body text-center">
-                              <h5 className="card-title text-center mb-4">Outfit #1</h5>
-                              <Link to="/products" className="btn btn-primary">Ver productos</Link>
+                              <h5 className="card-title text-center">Outfit #1</h5>
                             </div>
                           </div>
                         <div className="card">
                             <img src={outfitUrbano2} className="card-img-top" alt="outfit urbano" />
                             <div className="card-body text-center">
-                              <h5 className="card-title text-center mb-4">Outfit #2</h5>
-                              <Link to="/products" className="btn btn-primary">Ver productos</Link>
+                              <h5 className="card-title text-center">Outfit #2</h5>
                             </div>
                         </div>
+                      </div>
+                      <div className='d-flex justify-content-center mt-5'>
+                        <Link to="/products" className="btn btn-primary">Ver productos</Link>
                       </div>
                     </div>
                   </div>
@@ -82,17 +84,18 @@ const CarouselOutfitsHombre = () => {
                           <div className="card">
                             <img src={outfitCasualChic1} className="card-img-top" alt="outfit casual chic" />
                             <div className="card-body text-center">
-                              <h5 className="card-title text-center mb-4">Outfit #1</h5>
-                              <Link to="/products" className="btn btn-primary">Ver productos</Link>
+                              <h5 className="card-title text-center">Outfit #1</h5>
                             </div>
                           </div>
                         <div className="card">
                             <img src={outfitCasualChic2} className="card-img-top" alt="outfit casual chic" />
                             <div className="card-body text-center">
-                              <h5 className="card-title text-center mb-4">Outfit #2</h5>
-                              <Link to="/products" className="btn btn-primary">Ver productos</Link>
+                              <h5 className="card-title text-center">Outfit #2</h5>
                             </div>
                         </div>
+                      </div>
+                      <div className='d-flex justify-content-center mt-5'>
+                        <Link to="/products" className="btn btn-primary">Ver productos</Link>
                       </div>
                     </div>
                   </div>

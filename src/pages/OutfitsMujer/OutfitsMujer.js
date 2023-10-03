@@ -23,17 +23,18 @@ const OutfitsMujer = () => {
                         <img src={outfitRock1} className="card-img-top" alt="outfit rock" />
                         <div className="card-body text-center">
                           <h5 className="card-title text-center mb-4">Outfit #1</h5>
-                          <Link to="/products" className="btn btn-primary">Ver productos</Link>
                         </div>
                       </div>
                     <div className="card">
                         <img src={outfitRock2} className="card-img-top" alt="outfit rock" />
                         <div className="card-body text-center">
                           <h5 className="card-title text-center mb-4">Outfit #2</h5>
-                          <Link to="/products" className="btn btn-primary">Ver productos</Link>
                         </div>
                     </div>
                   </div>
+                  <div className='d-flex justify-content-center mt-5'>
+                        <Link to="/products" className="btn btn-primary">Ver productos</Link>
+                      </div>
                 </div>
               </div>
             </div>
@@ -53,17 +54,18 @@ const OutfitsMujer = () => {
                         <img src={outfitBoho1} className="card-img-top" alt="outfit boho" />
                         <div className="card-body text-center">
                           <h5 className="card-title text-center mb-4">Outfit #1</h5>
-                          <Link to="/products" className="btn btn-primary">Ver productos</Link>
                         </div>
                       </div>
                     <div className="card">
                         <img src={outfitBoho2} className="card-img-top" alt="outfit boho" />
                         <div className="card-body text-center">
                           <h5 className="card-title text-center mb-4">Outfit #2</h5>
-                          <Link to="/products" className="btn btn-primary">Ver productos</Link>
                         </div>
                     </div>
                   </div>
+                  <div className='d-flex justify-content-center mt-5'>
+                        <Link to="/products" className="btn btn-primary">Ver productos</Link>
+                      </div>
                 </div>
               </div>
             </div>
@@ -83,17 +85,18 @@ const OutfitsMujer = () => {
                         <img src={outfitCasual1} className="card-img-top" alt="outfit casual" />
                         <div className="card-body text-center">
                           <h5 className="card-title text-center mb-4">Outfit #1</h5>
-                          <Link to="/products" className="btn btn-primary">Ver productos</Link>
                         </div>
                       </div>
                     <div className="card">
                         <img src={outfitCasual2} className="card-img-top" alt="outfit casual" />
                         <div className="card-body text-center">
                           <h5 className="card-title text-center mb-4">Outfit #2</h5>
-                          <Link to="/products" className="btn btn-primary">Ver productos</Link>
                         </div>
                     </div>
                   </div>
+                  <div className='d-flex justify-content-center mt-5'>
+                        <Link to="/products" className="btn btn-primary">Ver productos</Link>
+                      </div>
                 </div>
               </div>
             </div>
