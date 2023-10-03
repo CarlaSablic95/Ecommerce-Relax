@@ -3,14 +3,14 @@ import ItemCount from '../ItemCount/ItemCount';
 import { useCart } from '../../context/CartProvider';
 import { Link } from 'react-router-dom';
 
-const ItemDetail = ({id, image, title, description, price, stock, style}) => {
+const ItemDetail = ({id, title, price, stock, style, image, description }) => {
 
     const [quantity, setQuantity] = useState(0);
     const { addItem } = useCart();
 
     const handleAddToCart = (number) => {
         setQuantity(number)
-        addItem({ id: id, title, price, stock}, number)
+        addItem({ id: id, title, price, stock, style, image, description}, number)
         }
 
     return(

@@ -44,7 +44,7 @@ const Cart = () => {
                                             <th scope="row">
                                                 <img src={`/img/productos/${image}`} alt={title} width="100px" />
                                             </th>
-                                            <td className="text-start align-middle">{description}</td>
+                                            <td className="text-center align-middle">{description}</td>
                                             <td className="fw-bold text-end align-middle">${price}</td>
                                             <td className="fw-bold text-end align-middle">{quantity} x ${price}</td>
                                             <td className="fw-bold text-end align-middle">${(quantity * price).toFixed(2)}</td>

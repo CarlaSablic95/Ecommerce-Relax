@@ -10,11 +10,11 @@ const CartProvider = ({ children }) => {
         localStorage.setItem("cart", JSON.stringify(cartList))
     }, [cartList]);
 
-    const addItem = (item, quantity, image, description) => {
+    const addItem = (item, quantity) => {
         const isInCart = cartList.some((cartItem) => cartItem.id === item.id)
         
         if(!isInCart) {
-            setCartList(prev => [...prev, { ...item, quantity, image, description }])
+            setCartList(prev => [...prev, { ...item, quantity}])
         } else {
             setCartList(cartList.map((prod)=>{
                 if(prod.id === item.id){
