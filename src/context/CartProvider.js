@@ -11,20 +11,20 @@ const CartProvider = ({ children }) => {
     }, [cartList]);
 
     const addItem = (item, quantity) => {
-        const existingItem = cartList.find((cartItem) => cartItem.id === item.id);
-
-        if (existingItem) {
-            const updatedCart = cartList.map((cartItem) => {
-                if (cartItem.id === item.id) {
-                    return { ...cartItem, quantity: cartItem.quantity + quantity };
-                }
-                return cartItem;
-            });
-            setCartList(updatedCart);
+        const isInCart = cartList.some((cartItem) => cartItem.id === item.id)
+        
+        if(!isInCart) {
+            setCartList(prev => [...prev, { ...item, quantity }])
         } else {
-            setCartList(prev => [...prev, { ...item, quantity }]);
-        }
-    }
+            setCartList(cartList.map((prod)=>{
+                if(prod.id === item.id){
+                    return{...prod, quantity: prod.quantity + quantity}
+                }else{
+                    return prod
+                }
+            }))
+        }
+    }
 
     const removeItem = (id) => {
         setCartList(cartList.filter((item) => item.id !== id))
