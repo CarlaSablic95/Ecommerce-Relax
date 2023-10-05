@@ -8,20 +8,20 @@ const Cart = () => {
     return (
         <section className="pt-5 container">
             <div className="row">
-                { cartList.length === 0 ? (<section className="py-5 my-5">
-            <div className="container text-center" id="contenido-carrito">
-                <h4 className="text-center text-black">¡No hay productos en el carrito!</h4>
-                <div className="">
-                 <img src={IconoCarrito} className="my-4" />
-                </div>
-                <Link to="/products" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Volver a la tienda
-                </Link>
-            </div>
-        </section> ) : (
-                <section className="pb-5">
-                    <Link to="/products" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Seguir comprando
-                </Link>
-                <h1 className="text-center">Carrito de compras</h1>
+                {cartList.length === 0 ? (<section className="py-5 my-5">
+                    <div className="container text-center" id="contenido-carrito">
+                        <h4 className="text-center text-black">¡No hay productos en el carrito!</h4>
+                        <div className="">
+                            <img src={IconoCarrito} className="my-4" />
+                        </div>
+                        <Link to="/products" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Volver a la tienda
+                        </Link>
+                    </div>
+                </section>) : (
+                    <section className="pb-5">
+                        <Link to="/products" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Seguir comprando
+                        </Link>
+                        <h1 className="text-center">Carrito de compras</h1>
                         <table className="table">
                             <thead>
                                 <tr>
@@ -66,11 +66,11 @@ const Cart = () => {
                             </tbody>
                         </table>
                         <div className="text-center">
-                        <Link to="/checkout" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Checkout
-                        </Link>
+                            <Link to="/checkout" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Checkout
+                            </Link>
 
-                                </div>
-                        </section>
+                        </div>
+                    </section>
                 )
 
                 }

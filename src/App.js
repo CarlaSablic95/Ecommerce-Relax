@@ -14,6 +14,7 @@ import CheckoutForm from './components/CheckoutForm/CheckoutForm';
 import Footer from './components/Footer/Footer';
 import CartProvider from './context/CartProvider';
 import { ToastContainer } from 'react-toastify';
+import Checkout from './pages/Checkout/Checkout';
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
           <Route path="/outfits-hombre" element={<OutfitsHombre/>} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<CheckoutForm />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

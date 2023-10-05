@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useCart } from "../../context/CartProvider";
-import { Timestamp, addDoc, documentId, getDocs, query, collection, where, writeBatch } from "../../firebaseConfig/config";
+import { Timestamp, addDoc, getDocs, query, collection, where, writeBatch, documentId } from "firebase/firestore";
+import { db } from "../../firebaseConfig/config";
 import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false);
   const [orderId, setOrderId] = useState("");
-  const { cartList, total, clear } = useCart();
+  const { cartList, total, clear} = useCart();
 
   const createOrder = async ({ name, phone, email }) => {
     setLoading(true);
@@ -18,7 +19,7 @@ const Checkout = () => {
           email,
         },
         items: cartList,
-        total: total(),
+        total: total,
         date: Timestamp.fromDate(new Date()),
       };
 
@@ -73,7 +74,6 @@ const Checkout = () => {
 
   return(
     <div>
-      <h1>Checkout</h1>
       <CheckoutForm onConfirm={ createOrder } />
     </div>
   )
