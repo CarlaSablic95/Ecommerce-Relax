@@ -2,38 +2,45 @@ import { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { useCart } from '../../context/CartProvider';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const ItemDetail = ({id, title, price, stock, style, image, description }) => {
-
+const ItemDetail = ({ id, title, price, stock, style, image, description }) => {
     const [quantity, setQuantity] = useState(0);
     const { addItem } = useCart();
 
     const handleAddToCart = (number) => {
-        setQuantity(number)
-        addItem({ id: id, title, price, stock, style, image, description}, number)
-        }
+        setQuantity(number);
+        addItem({ id: id, title, price, stock, style, image, description }, number);
 
-    return(
-       <section className='container detalle-producto'>
-        <div className="d-flex flex-column flex-md-row justify-content-center">
-            <picture>
-                <img src={`/img/productos/${image}`} alt={title} className='img-fluid'/>
-            </picture>
-        <div className='text-center text-md-start'>
-            <p className='fst-italic text-secondary'>Estilo: {style}</p>
-            <h3 className='fw-bold'>{title}</h3>
-            <p>{description}</p>
-            <p className='fw-bold'>${price}</p>
-            <div>
-                { quantity > 0 ?
-                (<Link to='/cart' className='btn btn-primary'>Terminar compra</Link>)
-                    : (<ItemCount initial={1} stock={stock || 0 } onAdd={ handleAddToCart } />) 
-                    
-            }
+        toast.success(`Producto "${title}" agregado al carrito`, {
+            position: "top-right",
+            autoClose: 4000
+        });
+    }
+
+    return (
+        <section className='container detalle-producto'>
+            <div className="d-flex flex-column flex-md-row justify-content-center">
+                <div className='product-image-container'>
+                    <img src={`/img/productos/${image}`} alt={title} className='img-fluid' />
+                    <div className='zoomed-image'></div>
+                </div>
+                <div className='text-center text-md-start'>
+                    <p className='fst-italic text-body-secondary'>Estilo: {style}</p>
+                    <h3 className='fw-bold mb-3'>{title}</h3>
+                    <p className='fs-5'>${price}</p>
+                    <hr />
+                    <p><span className='fw-bold text-uppercase letter-spacing'>Descripción:</span> <br />{description}</p>
+                    <div>
+                        {quantity > 0 ?
+                            (<Link to='/cart' className='btn btn-primary'>Terminar compra</Link>)
+                            : (<ItemCount initial={1} stock={stock || 0} onAdd={handleAddToCart} />)
+                        }
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
-    </section> 
+        </section>
     )
 }
 

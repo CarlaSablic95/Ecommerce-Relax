@@ -18,10 +18,10 @@ const Cart = () => {
                 </Link>
             </div>
         </section> ) : (
-                <section>
+                <section className="pb-5">
                     <Link to="/products" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Seguir comprando
                 </Link>
-                <h1 className="text-center">Checkout</h1>
+                <h1 className="text-center">Carrito de compras</h1>
                         <table className="table">
                             <thead>
                                 <tr>
@@ -32,7 +32,7 @@ const Cart = () => {
                                     <th scope="col" className="text-end">Subtotal</th>
                                     <th scope="col" className="text-center">
                                         <button className="btn btn-danger" onClick={clear}>
-                                            <i className="bi bi-trash3-fill"></i>
+                                            Vaciar carrito
                                         </button>
                                     </th>
                                 </tr>
@@ -65,9 +65,11 @@ const Cart = () => {
                                 </tr>
                             </tbody>
                         </table>
+                        <div className="text-center">
+                        <Link to="/checkout" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Checkout
+                        </Link>
 
-                        <Link to="/checkout" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Comprar
-                </Link>
+                                </div>
                         </section>
                 )
 

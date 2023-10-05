@@ -22,10 +22,6 @@ const routes = [
     {
         path: '/faq',
         link: 'FAQ'
-    },
-    {
-        path: '/login',
-        link: 'Ingresar'
     }
 ]
 

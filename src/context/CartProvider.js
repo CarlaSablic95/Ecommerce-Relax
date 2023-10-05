@@ -34,7 +34,7 @@ const CartProvider = ({ children }) => {
     }
 
     const getTotal = () => {
-       return cartList.reduce((acc, item) => acc += item?.stock * item?.price, 0).toFixed(2)
+       return cartList.reduce((acc, item) => acc += item?.quantity * item?.price, 0).toFixed(2)
     }
 
     const getTotalQuantity = () => {

@@ -5,13 +5,24 @@ const Home = () => {
         <main>
             <section className="portada position-relative"></section>
             <section className="seccion-nosotros text-white d-flex justify-content-center p-4 p-md-5">
-                <div className="col-11 col-md-9 col-lg-6 p-4 p-md-5 border position-relative">
+                <div className="p-4 p-md-5 border position-relative">
                     <h3 className="brittany titulo-nosotros position-absolute text-dark p-2">Sobre <span className="fst-italic">nosotros</span></h3>
                     <div>
-                        <p>Somos <strong>Relax</strong>, una empresa rosarina de indumentaria femenina y masculina dedicada exclusivamente a nuestros clientes. </p>
-                        <h3 className="brittany titulo-nosotros position-absolute text-dark p-2">Sobre <span className="fst-italic">nosotros</span></h3>
-                        <p>Nuestro nombre proviene de nuestra <strong>misión</strong>, que es lograr que nuestros clientes tengan su <strong>momento de relax</strong> al comprar ropa en nuestro sitio web. Comprar online requiere de mucho tiempo sobre todo si no estás seguro/a de cuál es el estilo indicado para vos, y que sea acorde a tus gustos y personalidad.</p>
-                        <p>Por esto, proponemos junto a los mejores asesores de moda del país, una amplia variedad de outfits prearmados de distintos estilos, para que sólo te ocupes de disfrutar a la hora de comprar.</p>
+                        <p>Somos <strong>Relax</strong>, una marca rosarina de moda que se enorgullece de ofrecer indumentaria femenina y masculina de alta calidad. Nuestro compromiso es con nuestros clientes, y nos esforzamos por garantizar su satisfacción en cada compra.</p>
+                    </div>
+                </div>
+
+                <div className="p-4 p-md-5 border position-relative">
+                    <h3 className="brittany titulo-nosotros position-absolute text-dark p-2">Misión</h3>
+                    <div>
+                        <p>El nombre "Relax" refleja nuestra misión: queremos que tu experiencia de compra sea un momento de relajación. Sabemos que comprar ropa online puede ser un desafío, especialmente cuando estás buscando el estilo perfecto que se adapte a tus gustos y personalidad.</p>
+                    </div>
+                </div>
+
+                <div className="p-4 p-md-5 border position-relative">
+                    <h3 className="brittany titulo-nosotros position-absolute text-dark p-2">Propuesta</h3>
+                    <div>
+                        <p>Para hacer tu experiencia de compra más placentera, hemos colaborado con los mejores asesores de moda del país para ofrecerte una variedad de outfits prearmados para diferentes estilos. Nuestro objetivo es que disfrutes al máximo tu experiencia de compra, sin la necesidad de preocuparte por encontrar el outfit perfecto. Con Relax, la moda está al alcance de tus manos.</p>
                     </div>
                 </div>
             </section>
