@@ -8,7 +8,7 @@ const Footer = () => {
                     </div>
                     <div className="col-12 col-md-4">
                         <h4 className="mb-4 fst-italic">Contactanos</h4>
-                        <p className="mb-2"><i className="bi bi-phone"></i> 3412485979</p>
+                        <p className="mb-2"><i className="bi bi-phone"></i> 3412345678</p>
                         <p><i className="bi bi-geo-alt"></i> Rosario, Santa Fe</p>
                     </div>
                     <div className="col-12 col-md-4 text-white text-center">

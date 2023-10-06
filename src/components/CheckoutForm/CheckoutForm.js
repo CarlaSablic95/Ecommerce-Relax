@@ -55,7 +55,7 @@ const CheckoutForm = ({ onConfirm })  => {
                         <label htmlFor="phone">Phone <span className="text-danger">*</span></label>
                         </div>
                         <div className="text-center">
-                            <button type="submit" className="btn btn-primary border-0">Confirmar compra</button>
+                            <button type="submit" className="btn btn-primary border-0">Realizar compra</button>
                         </div>
                     </form>
                 </div>

@@ -39,7 +39,7 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse justify-content-between align-items-center" id="navbarNavDropdown">
                     <ul className="navbar-nav align-items-center">
                         { routes.map((route) => (
-                            <NavLink key={route.path} to={route.path} className={({isActive}) => `${isActive ? 'active' : ''} mb-3 mb-md-0 mx-4 text-decoration-none nav-item me-2 text-dark text-center`}>
+                            <NavLink key={route.path} to={route.path} className={({isActive}) => `${isActive ? 'active' : ''} mb-3 mb-lg-0 mx-4 text-decoration-none nav-item me-2 text-dark text-center`}>
                             {route.link}</NavLink>
                         ))}
                     </ul>

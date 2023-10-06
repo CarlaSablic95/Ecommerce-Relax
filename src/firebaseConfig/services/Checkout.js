@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useCart } from "../../context/CartProvider";
 import { Timestamp, addDoc, getDocs, query, collection, where, writeBatch, documentId } from "firebase/firestore";
-import { db } from "../../firebaseConfig/config";
+import { db } from "../config";
 import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";
 
 const Checkout = () => {
@@ -18,6 +18,7 @@ const Checkout = () => {
           phone,
           email,
         },
+        state: "generated",
         items: cartList,
         total: total,
         date: Timestamp.fromDate(new Date()),
@@ -38,7 +39,7 @@ const Checkout = () => {
         const stockDb = dataDoc.stock;
 
         const productAddedToCart = cartList.find((prod) => prod.id === doc.id);
-        const prodQuantity = productAddedToCart?.prodQuantity;
+        const prodQuantity = productAddedToCart?.quantity;
 
         if(stockDb >= prodQuantity) {
           batch.update(doc.ref, { stock: stockDb - prodQuantity });
@@ -65,11 +66,26 @@ const Checkout = () => {
   };
 
   if(loading) {
-    return <h1>Se está generando su orden...</h1>;
+    return (
+    <div className="vh-70 d-flex justify-content-center align-items-center">
+      <h1>Se está generando su orden...</h1>
+    </div>
+    )
   }
 
   if(orderId) {
-    return <h1>El ID de su orden es: { orderId }</h1>
+    return (
+      <div className="p-5 vh-70 d-flex align-items-center">
+        <div className="card mx-auto" style= {{width:"50%"}}>
+          <div className="card-header text-center bg-dark">
+            <h2 className="beige">Orden de compra</h2>
+          </div>
+          <div className="card-body">
+            <h3>El ID de su orden es: <span className="fw-bold">{ orderId }</span></h3>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return(

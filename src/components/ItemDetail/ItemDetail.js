@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { useCart } from '../../context/CartProvider';
 import { Link } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetail = ({ id, title, price, stock, style, image, description }) => {
@@ -33,7 +33,9 @@ const ItemDetail = ({ id, title, price, stock, style, image, description }) => {
                     <hr />
                     <p><span className='fw-bold text-uppercase letter-spacing'>Descripción:</span> <br />{description}</p>
                     <div>
-                        {quantity > 0 ?
+                        { stock === 0 ? 
+                            (<p className='text-danger bg-danger-subtle text-center rounded'> Fuera de stock</p>)
+                            : quantity > 0 ?
                             (<Link to='/cart' className='btn btn-primary'>Terminar compra</Link>)
                             : (<ItemCount initial={1} stock={stock || 0} onAdd={handleAddToCart} />)
                         }

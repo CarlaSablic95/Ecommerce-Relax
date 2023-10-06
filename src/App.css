@@ -30,6 +30,14 @@ body {
   font-family: "Brittany";
 }
 
+.beige {
+  color: var(--beige);
+}
+
+.vh-70 {
+  height: 70vh;
+}
+
 .btn-primary {
   background-color: var(--dark-black) !important;
   color: var(--beige) !important;

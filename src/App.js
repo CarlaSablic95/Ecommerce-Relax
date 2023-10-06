@@ -10,11 +10,10 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
-import CheckoutForm from './components/CheckoutForm/CheckoutForm';
 import Footer from './components/Footer/Footer';
 import CartProvider from './context/CartProvider';
 import { ToastContainer } from 'react-toastify';
-import Checkout from './pages/Checkout/Checkout';
+import Checkout from './firebaseConfig/services/Checkout';
 
 function App() {
 
