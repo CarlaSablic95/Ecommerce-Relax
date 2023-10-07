@@ -6,7 +6,7 @@ const Cart = () => {
     const { cartList, clear, removeItem, total } = useCart();
 
     return (
-        <section className="p-5">
+        <section className="p-5 container">
             <div>
                 {cartList.length === 0 ? (<section className="py-5 my-5">
                     <div className="container text-center" id="contenido-carrito">
