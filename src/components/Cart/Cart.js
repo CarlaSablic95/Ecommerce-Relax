@@ -22,7 +22,7 @@ const Cart = () => {
                         <Link to="/products" className="text-center text-decoration-none fs-6 btn btn-primary border-0">Seguir comprando
                         </Link>
                         <h1 className="text-center">Carrito de compras</h1>
-                        <table className="table">
+                        <table className="table my-5">
                             <thead>
                                 <tr>
                                     <th className="text-start">Producto</th>
