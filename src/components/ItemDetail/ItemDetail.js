@@ -22,9 +22,8 @@ const ItemDetail = ({ id, title, price, stock, style, image, description }) => {
     return (
         <section className='container detalle-producto'>
             <div className="d-flex flex-column flex-md-row justify-content-center">
-                <div className='product-image-container'>
+                <div className=''>
                     <img src={`/img/productos/${image}`} alt={title} className='img-fluid' />
-                    <div className='zoomed-image'></div>
                 </div>
                 <div className='text-center text-md-start'>
                     <p className='fst-italic text-body-secondary'>Estilo: {style}</p>

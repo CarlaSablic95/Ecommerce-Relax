@@ -1,22 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const CheckoutForm = ({ onConfirm })  => {
+const CheckoutForm = ({ onConfirm }) => {
     const [name, setName] = useState("");
+    const [surname, setSurname] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
+    const [confirmEmail, setConfirmEmail] = useState("");
+    const [isformValid, setIsFormValid] = useState(false);
 
     const handleConfirm = (event) => {
         event.preventDefault();
-        
-        const userData = {
-            name,
-            phone,
-            email
-        };
 
-        onConfirm(userData);
+        if(email === confirmEmail) {
+            const userData = {
+                name,
+                surname,
+                phone,
+                email
+            };
+            onConfirm(userData);
+        } else {
+            console.error("Los emails no coinciden");
+        }
     };
 
+    const checkForm = () => {
+        if (name !== "" &&
+            surname !== "" &&
+            phone !== "" &&
+            email !== "" &&
+            email === confirmEmail) {
+            setIsFormValid(true);
+        } else {
+            setIsFormValid(false);
+        }
+    }
+
+    useEffect(() => {
+        checkForm();
+    }, [name, surname, phone, email, confirmEmail])
 
     return (
         <section className="py-5">
@@ -25,37 +47,58 @@ const CheckoutForm = ({ onConfirm })  => {
                 <div className="card p-4 w-50 mx-auto">
                     <form onSubmit={handleConfirm}>
                         <div className="form-floating mb-3">
-                        <input 
-                        type="name" 
-                        className="form-control" 
-                        id="name" 
-                        placeholder="name@example.com"
-                        value={name}
-                        onChange={({target}) => setName(target.value)} />
-                        <label htmlFor="nombre">Nombre <span className="text-danger">*</span></label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="name"
+                                placeholder=""
+                                value={name}
+                                onChange={({ target }) => setName(target.value)} required />
+                            <label htmlFor="nombre">Nombre <span className="text-danger">*</span></label>
                         </div>
                         <div className="form-floating mb-3">
-                        <input
-                        type="email"
-                        className="form-control" 
-                        id="email"
-                        placeholder="name@example.com"
-                        value={email}
-                        onChange={({target}) => setEmail(target.value)} />
-                        <label htmlFor="email">Email <span className="text-danger">*</span></label>
+                            <input type="text"
+                            className="form-control" 
+                            id="surname" 
+                            placeholder=""
+                            value={surname}
+                            onChange={({ target }) => setSurname(target.value)} required />
+                            <label htmlFor="surname">Apellido <span className="text-danger">*</span></label>
+                        </div>
+                        <div className="form-floating mb-3">
+                            <input
+                                type="email"
+                                className="form-control"
+                                id="email"
+                                placeholder="name@example.com"
+                                value={email}
+                                onChange={({ target }) => setEmail(target.value)} required />
+                            <label htmlFor="email">Email <span className="text-danger">*</span></label>
+                        </div>
+                        <div className="form-floating mb-3">
+                            <input
+                                type="email"
+                                className="form-control"
+                                id="confirmEmail"
+                                placeholder="Confirmar email"
+                                value={confirmEmail}
+                                onChange={({ target }) => setConfirmEmail(target.value)}
+                                required
+                            />
+                            <label htmlFor="confirmEmail">Confirmar Email <span className="text-danger">*</span></label>
                         </div>
                         <div className="form-floating mb-4">
-                        <input
-                        type="tel"
-                        className="form-control"
-                        id="phone"
-                        placeholder=""
-                        value={phone}
-                        onChange={({target}) => setPhone(target.value)}/>
-                        <label htmlFor="phone">Phone <span className="text-danger">*</span></label>
+                            <input
+                                type="tel"
+                                className="form-control"
+                                id="phone"
+                                placeholder=""
+                                value={phone}
+                                onChange={({ target }) => setPhone(target.value)} required />
+                            <label htmlFor="phone">Teléfono <span className="text-danger">*</span></label>
                         </div>
                         <div className="text-center">
-                            <button type="submit" className="btn btn-primary border-0">Realizar compra</button>
+                            <button type="submit" className="btn btn-primary border-0" disabled={!isformValid}>Realizar compra</button>
                         </div>
                     </form>
                 </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useCart } from "../../context/CartProvider";
 import { Timestamp, addDoc, getDocs, query, collection, where, writeBatch, documentId } from "firebase/firestore";
 import { db } from "../config";
+import { Link } from "react-router-dom";
 import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";
 
 const Checkout = () => {
@@ -75,7 +76,7 @@ const Checkout = () => {
 
   if(orderId) {
     return (
-      <div className="p-5 vh-70 d-flex align-items-center">
+      <div className="p-5 vh-70 d-flex flex-column align-items-center">
         <div className="card mx-auto" style= {{width:"50%"}}>
           <div className="card-header text-center bg-dark">
             <h2 className="beige">Orden de compra</h2>
@@ -83,6 +84,9 @@ const Checkout = () => {
           <div className="card-body">
             <h3>El ID de su orden es: <span className="fw-bold">{ orderId }</span></h3>
           </div>
+        </div>
+        <div className="mt-5">
+          <Link to="/" className="btn-primary text-decoration-none p-2">Volver a inicio</Link>
         </div>
       </div>
     )
